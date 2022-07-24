@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imtihon 4-oy</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(138, 137, 137);
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #000000b0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="lists">
+        <ul class="user-list">
+          <img class="user-list__loading" src="./img/loading.svg" alt="Loading" width="50" height="50"/>
+        </ul>
+
+        <ul class="post-list"></ul>
+
+        <ul class="comment-list"></ul>
+      </div>
+    </div>
+
+
+
+    <!-- USER TEMPLATE -->
+    <template class="user-list__template">
+      <li class="user-list__item">
+        <div class="user-list__id-wrapper">
+          <div class="user-list__name-wrapper">
+            <h2 class="user-list__name"></h2>
+            <h3 class="user-list__username"></h3>
+            <a class="user-list__email"></a>
+          </div>
+          <span class="user-list__id"></span>
+        </div>
+        <address class="user-list__address">
+          <span class="user-list__address-street"></span>
+          <span class="user-list__address-suite"></span>
+          <span class="user-list__address-city"></span>
+          <span class="user-list__address-zipcode"></span>
+          <a class="user-list__geo">
+            <a class="user-list__geo-lat"></a>
+            <a class="user-list__geo-lng"></a>
+          </a>
+        </address>
+        <div class="user-list__company">
+          <h3 class="user-list__company-name"></h3>
+          <p class="user-list__company-catchPhrase"></p>
+          <p class="user-list__company-bs"></p>
+        </div>
+        <div class="user-list__link-wrapper">
+          <a class="user-list__website" target="_blank"></a>
+          <a class="user-list__phone"></a>
+        </div>
+      </li>
+    </template>
+
+    <!-- POST TEMPLATE -->
+    <template class="post-list__template">
+      <li class="post-list__item">
+        <strong class="post-list__title"></strong>
+        <p class="post-list__body"></p>
+      </li>
+    </template>
+
+    <!-- COMMENT TEMPLATE -->
+    <template class="comment-list__template">
+      <li class="comment-list__item">
+        <h2 class="comment-list__name"></h2>
+        <a class="comment-list__email" href=""></a>
+        <p class="comment-list__body"></p>
+      </li>
+    </template>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
